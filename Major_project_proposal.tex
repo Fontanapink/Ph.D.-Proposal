@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	bookmarks=true,
+	breaklinks=true,
+	pdfauthor=Pedro Fontanarrosa,
+	pdftitle=Ph.D. Proposal,
+	pdfdisplaydoctitle = true,
+}
+%%%%this allows the use of " in latex
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+%%%%%
+\usepackage{enumitem}
+\usepackage{todonotes}
+
+%\renewcommand{\thesection}{\arabic{section}.\arabic{subsection}}
+%%%%% This is to make the subsections numbering change to a section numbering
+\renewcommand\thesubsection{\arabic{subsection}}
+%\renewcommand\thesection{\arabic{section}}
+%\renewcommand\thesubsection{\Alph{subsection}}
+
+
+\usepackage[bibstyle=ieee, maxbibnames=99,backend=biber, doi=false ,url=false, isbn=false, giveninits=true, date=year]{biblatex}
+\addbibresource{references.bib}
+
+\title{Ph.D. Proposal}
+\author{Pedro Fontanarrosa, UID: 01143732}
+\date{January 2020}
+
+\begin{document}
+
+\maketitle
+\section*{Specific Aims}
+Write about the proposed work touching the research gap you are~\cite{nielsen_GeneticCircuitDesign_2016}.
+
+%\setcounter{subsection}{0}
+\subsection{Automatic model generation and analysis of genetic circuits} \label{analysis}
+
+\todo[inline]{generalizing modeling generation}
+The \href{https://github.com/MyersResearchGroup/iBioSim}{iBioSim tool}~\cite{watanabe_IBioSimToolModelbased_2018}, developed by \href{https://async.ece.utah.edu/tools/ibiosim/}{Chris's Myers research group}, is a computer-aided design (CAD) tool for modeling, analysis, and design of \emph{genetic regulatory networks} (GRNs). This tool can, amongst other things, automatically generate models for GRNs and obtain predictions from their simulation. However, there are a plethora of different analysis methods that can be implemented to further expand what iBioSim is capable of and generalize model generation. Some of these improvements that can be implemented are:
+\begin{itemize}
+	\item \textbf{Add road-blocking effects}
+	 	{\small
+	 	\begin{description}[nosep]
+	 		\item Interference between two tandem promoters with the same orientation in the expression of a gene is a known phenomenon~\cite{tamsir_RobustMulticellularComputing_2011}. Mathematical modeling methods have been described to describe this roadblocking effect of tandem promoters~\cite{sneppen_MathematicalModelTranscriptional_2005} and could be accounted for in the automatic model generator in iBioSim. 
+	 	\end{description}
+	 }
+	\item \textbf{\hypertarget{p_estimation}{Parameter estimation} \& optimization} %estimation of parameters using steady-state PCR data
+	{\small
+	\begin{description}[nosep]
+		\item Systems biology has developed new -\emph{omics} tools that offer the potential to take a "snapshot" of the inner workings of a circuit in a single experiment~\cite{gorochowski_GeneticCircuitCharacterization_2017}. Some very popular transcriptomic methods of these are \emph{RNA sequencing} (RNA-seq), which enables one to quantify the mRNA levels of each gate of a circuit with nucleotide resolution~\cite{wang_RNASeqRevolutionaryTool_2009}, and \emph{Ribosome profiling} (Ribo-seq), which uses specialized mRNA sequencing to determine which mRNAs are being actively translated. 
+		These high-throughput experiments allow for a complete analysis of a genetic circuit and its impact on the organism, the transfer functions of each genetic gate or part when not in isolation, maximum and minimum levels of transcription, and many other transcriptome analyses~\cite{xiang_ScalingGeneticCircuit_2018}, and can be used to estimate model parameters. A parameter estimation process could be instantiated in iBioSim to automatically estimate model parameters using optimization methods. 
+	\end{description}
+	}
+	\item \textbf{CRISPR/dCas9 circuit modeling}
+		{\small
+		\begin{description}[nosep]
+			\item Recently, programmable and orthogonal CRISPR/dCas9 transcription factors have been developed~\cite{gander_DigitalLogicCircuits_2017,didovyk_TranscriptionalRegulationCRISPRCas9_2016,gilbert_CRISPRmediatedModularRNAguided_2013,nielsen_MultiInputCRISPR_2014,qi_RepurposingCRISPRRNAguided_2013}. These transcription factors can be used to build genetic circuits with dCas9-mediated repression. The CRISPR/dCas9 transcription factor system can yield orthogonal genetic gates with low variability and that show minimal retroactivity or effects on cell growth~\cite{gander_DigitalLogicCircuits_2017}. This makes the gates relatively easy to combine into Boolean logic circuits since the different guide-RNA's have very high specificity, and therefore there is no gate interference and/or leakage. Genetic circuits constructed this way are amongst the largest ever built in any organism~\cite{gander_DigitalLogicCircuits_2017}.
+			
+			The automatic model generator of iBioSim can easily be adapted to model CRISPR gates and create automatic models for circuits that implement them. Estimation of the parameters for these gates could be done by analysis of results or the \hyperlink{p_estimation}{automatic estimation of parameters} proposed earlier. This would expand the automated model generator of iBioSim to not only work with Cello composed and parameterized gates, but also CRISPR/dCas9 mediated repression gates, and have another method to generate models and simulations for circuits in yeast.
+		\end{description}
+	}
+	\item \textbf{Circuit Hazard Identification}
+			{\small
+		\begin{description}[nosep]
+			\item As of now, to analyze a circuit's function and logic hazards using the dynamic model generator is not an automatic process, and a certain grasp of the topic is needed in order to perform this analysis. To make this analysis available to any user without the need of any understanding on how to do so, it would prove very useful to implement an analysis~\cite{brzozowski_AlgebrasHazardDetection_2001,brzozowski_HazardAlgebras_2003} that can automatically detect function and logic hazards on a circuit and report them back to the user. This report can also include a list of input changes that may cause a glitching behavior. If a stochastic model of the circuit is available (aim \ref{stochastic}), the probability of a glitch can also be reported. This automated analysis can be integrated in the automated model generator in iBioSim, or as a stand-alone application that can be exported to other software tools, like Cello~\cite{nielsen_GeneticCircuitDesign_2016}.
+		\end{description}
+		}
+	\item \textbf{Circuit performance and complexity scores}
+				{\small
+		\begin{description}[nosep]
+			\item \emph{Circuit complexity} is measured by the size and depth of a circuit. Complexity scores for electronic circuits essentially depend only on number of gates and can be easily calculated from the truth table or Karnaugh map of a circuit. However, deriving a complexity score for synthetic biology is not as simple since firstly, genetic circuits for a given truth table differ in both gene numbers and quantity of regulation factors and levels, and secondly, circuit performance is not guaranteed due to nonlinear interactions present when the genetic circuit is introduced into a host cell~\cite{marchisio_AutomaticDesignDigital_2011}.
+			
+			Larger genetic circuits have a larger metabolic burden or load on the host cell and are harder/more costly to build~\cite{xiang_ScalingGeneticCircuit_2018}. Therefore, a complexity score may help a \hyperlink{design}{designer} to set an upper limit on the complexity of a circuit if the known limit for the organism intended is known. Deriving or adopting a complexity score suitable for genetic circuits and developing an algorithm that can calculate such a score would be indeed be a valuable asset for the automated model generator. 
+						
+			\emph{Circuit performance} can be thought of as the capacity of a circuit to reproduce faithfully or successfully the truth table. There are two essential factors that determine the performance of a circuit, which are the extent that the \emph{high} and \emph{low} output signal of each genetic gate can be practically distinguished, and the transient dynamics after changes in the inputs that may produce incorrect results~\cite{marchisio_AutomaticDesignDigital_2011,marchisio_PartsPoolsFramework_2014}.
+			
+			The automated model generator of iBioSim could be expanded to calculate an predicted circuit performance. This metric could be based solely on a statistical analysis of the difference between the predicted steady-state output and experimental results. Marchisio \textit{et al.}~\cite{marchisio_PartsPoolsFramework_2014,marchisio_AutomaticDesignDigital_2011} propose the difference of the minimal and maximal output at steady-state for each gate as a main parameter to quantify gate and circuit performance. Whichever method is preferred, a report (along with complexity score) could be reported as soon as a model simulation of the circuit is done, so as to help the user in the design process of a genetic circuit.
+		\end{description}
+	}
+	\item \textbf{Add model generator for new model from Voigt's lab}
+				{\small
+		\begin{description}[nosep]
+			\item I mean, since we are doing the work why not right?
+		\end{description}
+	}
+\end{itemize}
+
+
+\subsection{Develop a dynamic stochastic model for genetic regulatory networks}\label{stochastic}
+
+The deterministic framework of ODE analysis is appropriate to describe the mean behavior of a system, with underlying assumptions such that the variables vary in a deterministic and continuous fashion. However, the stochastic nature of biochemical reactions, even at the single-gene level~\cite{elowitz_StochasticGeneExpression_2002}, generates significant intrinsic genetic noise to a system~\cite{purnick_SecondWaveSynthetic_2009}. Furthermore, the underlying assumption of continuous-deterministic models that the number of molecules is high (or that the volume of the system is infinite) can be invalid for biochemical systems where there are very few transcription factors or only one copy DNA segment~\cite{kaznessis_ModelsSyntheticBiology_2007}. Since transcription factors, enzymes, and DNA copies can exist in systems at a low concentration such as a single molecule per cell, any realistic analysis of these systems must include stochastic effects, and therefore stochastic modeling and analysis~\cite{crook_ModelbasedDesignSynthetic_2013}.
+
+In previous work~\cite{fontanarrosa_AnalyzingGeneticCircuits_2019}, we analyzed function hazards and observed glitch behavior predicted using the deterministic-continuous approach of an ODE model analysis. This represents the average behavior expected for a system. However, with analysis of a stochastic model of the same circuits, we could compute the \emph{probabilities} of each possible glitch and have the automated model generator report these probabilities. In this way, anyone using this model generator for \hyperlink{design}{design purposes} can have an idea of the risks of this unwanted switching behavior happening and determine if they need to restrict the allowed input changes to the circuit to make certain that the glitching behavior does not occur. Furthermore, knowledge of these glitch probabilities can be used while exploring circuit design spaces \hyperlink{design}{with certain applications in mind} (aim \ref{design1}). A \hypertarget{hazardDesign}{logic-synthesis method} that uses hazard-preserving optimizations can be implemented as part of the genetic circuit design in iBioSim~\cite{watanabe_IBioSimToolModelbased_2018}, or as a stand-alone application for use in other \emph{genetic design automation} (GDA) tools like Cello~\cite{nielsen_GeneticCircuitDesign_2016}. The designer can determine/state which glitches should be avoided and the logic-synthesis method developed will provide a design that doesn't contain hazards that the user deemed critical. This can be done by delimiting the design process using hazard-preserving optimizations to prevent likely function or logic hazards~\cite{myers_AsynchronousCircuitDesign_2001} \todo{add more citations}. 
+
+A stochastic model would also allow to implement a sensitivity analysis of the kinetic model~\cite{dacol_SensitivityAnalysisStochastic_1984,damiani_ParameterSensitivityAnalysis_2013,gupta_EfficientUnbiasedMethod_2014,irving_StochasticSensitivityAnalysis_1992,marino_MethodologyPerformingGlobal_2008}, which would allow one to systematically study the dependence of the quantities of interest on the parameters that define the model and the initial conditions in which it is simulated. Sensitivity analysis can be used to determine which parameters affect stability the most, and can be used to determine where in the circuit there needs to be \hyperlink{feedback}{feedback circuits}, which connects to aim \ref{design1}.
+
+To be able to produce a stochastic model and analysis on circuits, a translation from RPU units to molecule count has to be developed. This translation would map RPU units to actual molecule count in a cell, and with it, the propensity of each reaction rate. Both of these mappings are needed to enable stochastic modeling and simulation. A stochastic analysis would not only allow for more precise models, but also for other types of analysis, which are described in the next sections. This will entail, amongst other things, the implementation of the following steps:
+
+\begin{itemize}
+	\item Mapping method for RPU units and transcription rates to molecule counts for stochastic analysis
+	\item Development of the automatic model generator of stochastic models for GRNs
+	\item Characterization for stochastic analysis and modeling
+	\item  A \emph{parametric sensitivity analysis} (PSA) analysis on GRNs
+	\item Quantification of glitch propensities
+	\item Re-consider synthesis using stochastic modeling
+\end{itemize}
+
+\subsection{Develop consortium logic implementations, modeling and simulation} \label{consortium}
+Microbial consortia can perform more complicated tasks and endure more changeable environments than monocultures can~\cite{brenner_EngineeringMicrobialConsortia_2008}. Moreover, if a genetic circuit is too large for a single organism to handle, the circuit can be subdivided into smaller genetic circuits for each strain of the consortium, since the division of labor would make the burden of each circuit smaller. This makes synthetic biology for microbial consortium a new and important frontier for synthetic biology.\todo{talk about parallel computing?}
+
+As biological research on bacteria consortium progresses, a modeling scheme has to be developed to accompany this progress. Mathematical models that describe a consortium of cells are becoming a necessary tool to drive, rather than supplement, design of these systems. From an engineering standpoint, the special considerations for modeling bacterial consortium has to be taken into account when building mathematical models that describe the interactions not only within each cell, but also between the different cells that compose the consortium. This will especially provide insights on unknown interactions (such as resource competition), when the predictions of the model can be compared to experimental results, and the information revealed can help genetic circuit \hyperlink{design}{designers} to achieve desired symbiotic behaviors.
+
+There are several attempts in the systems biology research discipline to develop models that describe the dynamic behavior of gut microbia in~\cite{faust_MicrobialConsortiumDesign_2019,gould_MicrobiomeInteractionsShape_2018,pinto_ModelingMetabolicInteractions_2017,venturelli_DecipheringMicrobialInteractions_2018,white_MultiscaleModelingBiomedical_2009}, to cite a few. However, modeling and analysis of well-defined synthetic genetic networks are more amenable to detailed mathematical modeling and analysis~\cite{kambam_DesignMathematicalModelling_2008}.  An automated model generator for consortium genetic circuits could be implemented in iBioSim using existing mathematical model for synthetic symbiotic ecosystems, which would enable to automatically create models for these systems without extensive knowledge on the topic.
+
+Furthermore, we could implement a logic synthesis method in iBioSim for consortium circuits, to provide with an option to automatically design consortium synthetic circuits from a user-specified expected behavior. This method would split a circuit into independent ones for each organism in a consortium using the \hyperlink{hazardDesign}{hazard-preserving} method implemented in aim \ref{stochastic}. 
+
+Paper idea?
+Avoiding glitches might even be easier in consortium synthetic biology. Since for \textit{\textbf{inter}}-cellular interactions only the \emph{average} behavior is important, glitches won't be as prominent. The designer only has to prevent function and logic hazards for \textit{\textbf{intra}}-cellular interactions. So the more distributed a circuit is between modular circuits for a different organism, the glitching behavior is a problem.
+
+\todo[inline]{This has to be logic-hazard free preserving. This can even be more logic (and function) hazard free as there can be organisms that hold memory (logic hazard) and change one input at a time (function hazard). 
+	
+function or logic hazards won't matter for inter-cellular signals, because in the environment only the average matters. However, for intra-cellular signals there has to be logic and function preventing mechanisms. }
+
+
+\subsection[Design genetic circuits with different applications in mind]{\hypertarget{design}{Design} genetic circuits with different applications in mind} \label{design1}
+
+Use the product of aims 1, 2, and 3 to help other researchers design novel genetic circuits. This means, spark collaboration with other research laboratories and ask about their specific design problems and use everything developed through the course of this Ph.D. to tackle those design goals. This aim is intended not only for designing novel circuits, but also re-designing circuits with known design problems or short-comings (like glitching behavior).
+
+\todo[inline]{Delay circuit? Universal epigenetic circuit? Maybe researching feedback circuits, feedback loops and other stability circuits.}
+
+
+\subsection*{A \textit{very} specific aim list:}
+\begin{itemize}
+	\item Stochastic modeling
+	\item Hazard-free logic synthesis
+	\item Consortium modeling
+	\item Consortium circuit design automation
+	\item Design circuits with specific applications in mind
+\end{itemize}
+
+\printbibliography
+
+\end{document}
