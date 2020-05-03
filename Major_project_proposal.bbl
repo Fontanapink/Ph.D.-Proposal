@@ -1,0 +1,2125 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{nielsen_GeneticCircuitDesign_2016}{article}{}
+      \name{author}{9}{}{%
+        {{hash=2591fc3dd3bc8107a934ca50b4ba6447}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Alec\bibnamedelimb A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=53c4bcdb5cc4eafa79fc0d5d2512f152}{%
+           family={Der},
+           familyi={D\bibinitperiod},
+           given={Bryan\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f6421b94a8a6c1bad158fcb1d98ba2ad}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Jonghyeon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=729fc4f6252760859d54bf8f7821a76e}{%
+           family={Vaidyanathan},
+           familyi={V\bibinitperiod},
+           given={Prashant},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d72b4841b23a5d48a463c144ddd15bb1}{%
+           family={Paralanov},
+           familyi={P\bibinitperiod},
+           given={Vanya},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c64ce3814a49ec6a40196c080616d8e8}{%
+           family={Strychalski},
+           familyi={S\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ece265f92c171835479718aef8e64e3f}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c126764de652568ab85229034490efaf}{%
+           family={Densmore},
+           familyi={D\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ecb7f9b68090201ca38185fea8d97537}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \strng{fullhash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \strng{bibnamehash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \strng{authorbibnamehash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \strng{authornamehash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \strng{authorfullhash}{8acaa852bae4d6cf6a427dfee970bdc7}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Programming circuitry for synthetic biology As synthetic biology techniques become more powerful, researchers are anticipating a future in which the design of biological circuits will be similar to the design of integrated circuits in electronics. Nielsen et al. describe what is essentially a programming language to design computational circuits in living cells. The circuits generated on plasmids expressed in Escherichia coli required careful insulation from their genetic context, but primarily functioned as specified. The circuits could, for example, regulate cellular functions in response to multiple environmental signals. Such a strategy can facilitate the development of more complex circuits by genetic engineering. Science, this issue p. 10.1126/science.aac7341 Structured Abstract INTRODUCTIONCells respond to their environment, make decisions, build structures, and coordinate tasks. Underlying these processes are computational operations performed by networks of regulatory proteins that integrate signals and control the timing of gene expression. Harnessing this capability is critical for biotechnology projects that require decision-making, control, sensing, or spatial organization. It has been shown that cells can be programmed using synthetic genetic circuits composed of regulators organized to generate a desired operation. However, the construction of even simple circuits is time-intensive and unreliable. RATIONALEElectronic design automation (EDA) was developed to aid engineers in the design of semiconductor-based electronics. In an effort to accelerate genetic circuit design, we applied principles from EDA to enable increased circuit complexity and to simplify the incorporation of synthetic gene regulation into genetic engineering projects. We used the hardware description language Verilog to enable a user to describe a circuit function. The user also specifies the sensors, actuators, and “user constraints file” (UCF), which defines the organism, gate technology, and valid operating conditions. Cello (www.cellocad.org) uses this information to automatically design a DNA sequence encoding the desired circuit. This is done via a set of algorithms that parse the Verilog text, create the circuit diagram, assign gates, balance constraints to build the DNA, and simulate performance. RESULTSCello designs circuits by drawing upon a library of Boolean logic gates. Here, the gate technology consists of NOT/NOR logic based on repressors. Gate connection is simplified by defining the input and output signals as RNA polymerase (RNAP) fluxes. We found that the gates need to be insulated from their genetic context to function reliably in the context of different circuits. Each gate is isolated using strong terminators to block RNAP leakage, and input interchangeability is improved using ribozymes and promoter spacers. These parts are varied for each gate to avoid breakage due to recombination. Measuring the load of each gate and incorporating this into the optimization algorithms further reduces evolutionary pressure.Cello was applied to the design of 60 circuits for Escherichia coli, where the circuit function was specified using Verilog code and transformed to a DNA sequence. The DNA sequences were built as specified with no additional tuning, requiring 880,000 base pairs of DNA assembly. Of these, 45 circuits performed correctly in every output state (up to 10 regulators and 55 parts). Across all circuits, 92\% of the 412 output states functioned as predicted. CONCLUSIONOur work constitutes a hardware description language for programming living cells. This required the co-development of design algorithms with gates that are sufficiently simple and robust to be connected by automated algorithms. We demonstrate that engineering principles can be applied to identify and suppress errors that complicate the compositions of larger systems. This approach leads to highly repetitive and modular genetics, in stark contrast to the encoding of natural regulatory networks. The use of a hardware-independent language and the creation of additional UCFs will allow a single design to be transformed into DNA for different organisms, genetic endpoints, operating conditions, and gate technologies. {$<$}img class="fragment-image" aria-describedby="F1-caption" src="http://science.sciencemag.org/content/sci/352/6281/aac7341/F1.medium.gif"/{$>$} Download high-res image Open in new tab Download Powerpoint Genetic programming using Cello.A user specifies the desired circuit function in Verilog code, and this is transformed into a DNA sequence. An example circuit is shown (0xF6); red and blue curves are predicted output states for populations of cells, and solid black distributions are experimental flow cytometry data. The outputs are shown for all combinations of sensor states; plus and minus signs indicate the presence or absence of input signal. RBS, ribosome binding site; RPU, relative promoter unit; YFP, yellow fluorescent protein. Computation can be performed in living cells by DNA-encoded circuits that process sensory information and control biological functions. Their construction is time-intensive, requiring manual part assembly and balancing of regulator expression. We describe a design environment, Cello, in which a user writes Verilog code that is automatically transformed into a DNA sequence. Algorithms build a circuit diagram, assign and connect gates, and simulate performance. Reliable circuit design requires the insulation of gates from genetic context, so that they function identically when used in different circuits. We used Cello to design 60 circuits for Escherichia coli (880,000 base pairs of DNA), for which each DNA sequence was built as predicted by the software with no additional tuning. Of these, 45 circuits performed correctly in every output state (up to 10 regulators and 55 parts), and across all circuits 92\% of the output states functioned as predicted. Design automation simplifies the incorporation of genetic circuits into biotechnology projects that require decision-making, control, sensing, or spatial organization. A programming language is devised for biological regulatory circuits. A programming language is devised for biological regulatory circuits.}
+      \field{day}{1}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{6281}
+      \field{title}{Genetic Circuit Design Automation}
+      \field{urlday}{8}
+      \field{urlmonth}{11}
+      \field{urlyear}{2018}
+      \field{volume}{352}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{aac7341}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/science.aac7341
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Nielsen et al\\Nielsen et al. - 2016 - Genetic circuit design automation.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://science.sciencemag.org/content/352/6281/aac7341
+      \endverb
+      \verb{url}
+      \verb http://science.sciencemag.org/content/352/6281/aac7341
+      \endverb
+      \keyw{Circuit Design,Modeling,Synthetic Biology}
+    \endentry
+    \entry{watanabe_IBioSimToolModelbased_2018}{article}{}
+      \name{author}{8}{}{%
+        {{hash=24b8a59314df8b0da2a50843a393e73f}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Leandro},
+           giveni={L\bibinitperiod}}}%
+        {{hash=264cf7b62560830db2afd9d1cada33a9}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Tramy},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3214f9487d07db5ea11795e7d6ea416d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d3019066ee80d8c893b5dfe26309b7a1}{%
+           family={Zundel},
+           familyi={Z\bibinitperiod},
+           given={Zach},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=4be62463c6bbd4876f8fceaf19e1edcf}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=25564c998b35f12406df0b19114f89f3}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={Curtis},
+           giveni={C\bibinitperiod}}}%
+        {{hash=26ecb2a072a1756df1679cba1635eea5}{%
+           family={Roehner},
+           familyi={R\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=cda3c6c6e2ef7b4ff61916789cdc4ce6}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f9a27a427989cb87881be08d78281b9}
+      \strng{fullhash}{0f9a27a427989cb87881be08d78281b9}
+      \strng{bibnamehash}{0f9a27a427989cb87881be08d78281b9}
+      \strng{authorbibnamehash}{0f9a27a427989cb87881be08d78281b9}
+      \strng{authornamehash}{0f9a27a427989cb87881be08d78281b9}
+      \strng{authorfullhash}{0f9a27a427989cb87881be08d78281b9}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The iBioSim tool has been developed to facilitate the design of genetic circuits via a model-based design strategy. This paper illustrates the new features incorporated into the tool for DNA circuit design, design analysis, and design synthesis, all of which can be used in a workflow for the systematic construction of new genetic circuits.}
+      \field{day}{26}
+      \field{journaltitle}{ACS Synth. Biol.}
+      \field{month}{6}
+      \field{shorttitle}{{{iBioSim}} 3}
+      \field{title}{{{iBioSim}} 3: {{A}} Tool for Model-Based Genetic Circuit Design}
+      \field{urlday}{15}
+      \field{urlmonth}{11}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1021/acssynbio.8b00078
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Watanabe et al\\Watanabe et al-2018-iBioSim 2.pdf;C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Watanabe et al\\Watanabe et al-2018-iBioSim 3.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acssynbio.8b00078
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acssynbio.8b00078
+      \endverb
+    \endentry
+    \entry{tamsir_RobustMulticellularComputing_2011}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e8ece4f4efc1cfe9b9ed61d48e2624c7}{%
+           family={Tamsir},
+           familyi={T\bibinitperiod},
+           given={Alvin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ba7a1bc4332f15e51ffb8bd14a74333d}{%
+           family={Tabor},
+           familyi={T\bibinitperiod},
+           given={Jeffrey\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ecb7f9b68090201ca38185fea8d97537}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \strng{fullhash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \strng{bibnamehash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \strng{authorbibnamehash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \strng{authornamehash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \strng{authorfullhash}{8ae580c2ae2d78a33a33d4b3cfaa3f43}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Computation underlies the organization of cells into higher-order structures, for example during development or the spatial association of bacteria in a biofilm1,2,3. Each cell performs a simple computational operation, but when combined with cell–cell communication, intricate patterns emerge. Here we study this process by combining a simple genetic circuit with quorum sensing to produce more complex computations in space. We construct a simple NOR logic gate in Escherichia coli by arranging two tandem promoters that function as inputs to drive the transcription of a repressor. The repressor inactivates a promoter that serves as the output. Individual colonies of E. coli carry the same NOR gate, but the inputs and outputs are wired to different orthogonal quorum-sensing ‘sender’ and ‘receiver’ devices4,5. The quorum molecules form the wires between gates. By arranging the colonies in different spatial configurations, all possible two-input gates are produced, including the difficult XOR and EQUALS functions. The response is strong and robust, with 5- to {$>$}300-fold changes between the ‘on’ and ‘off’ states. This work helps elucidate the design rules by which simple logic can be harnessed to produce diverse and complex calculations by rewiring communication between cells.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{7329}
+      \field{title}{Robust Multicellular Computing Using Genetically Encoded {{NOR}} Gates and Chemical ‘Wires’}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2018}
+      \field{volume}{469}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{212\bibrangedash 215}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nature09565
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Tamsir et al\\Tamsir et al-2011-Robust multicellular computing using genetically encoded NOR gates and chemical.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nature09565
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nature09565
+      \endverb
+    \endentry
+    \entry{sneppen_MathematicalModelTranscriptional_2005}{article}{}
+      \name{author}{7}{}{%
+        {{hash=f5b8567831dadb725654bc06718f8caa}{%
+           family={Sneppen},
+           familyi={S\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=703d92f1125c73b9b057d5c04e102af0}{%
+           family={Dodd},
+           familyi={D\bibinitperiod},
+           given={Ian\bibnamedelima B.},
+           giveni={I\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a86cc34e071a338a6859a90eaa344274}{%
+           family={Shearwin},
+           familyi={S\bibinitperiod},
+           given={Keith\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9dccdd142a513175aab1973f88491255}{%
+           family={Palmer},
+           familyi={P\bibinitperiod},
+           given={Adam\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=60c161267f367f914c381d71c6571169}{%
+           family={Schubert},
+           familyi={S\bibinitperiod},
+           given={Rachel\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=babbc296cad04b9733f9f1fa8a5927ef}{%
+           family={Callen},
+           familyi={C\bibinitperiod},
+           given={Benjamin\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=882a2a1f8539e9b98b647718efb59104}{%
+           family={Egan},
+           familyi={E\bibinitperiod},
+           given={J.\bibnamedelimi Barry},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{77014967bab07c2162457ee9974f51b1}
+      \strng{fullhash}{77014967bab07c2162457ee9974f51b1}
+      \strng{bibnamehash}{77014967bab07c2162457ee9974f51b1}
+      \strng{authorbibnamehash}{77014967bab07c2162457ee9974f51b1}
+      \strng{authornamehash}{77014967bab07c2162457ee9974f51b1}
+      \strng{authorfullhash}{77014967bab07c2162457ee9974f51b1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Interactions between RNA polymerases (RNAP) resulting from tandem or convergent arrangements of promoters can cause transcriptional interference, often with important consequences for gene expression. However, it is not known what factors determine the magnitude of interference and which mechanisms are likely to predominate in any situation. We therefore developed a mathematical model incorporating three mechanisms of transcriptional interference in bacteria: occlusion (in which passing RNAPs block access to the promoter), collisions between elongating RNAPs, and “sitting duck” interference (in which RNAP complexes waiting to fire at the promoter are removed by passing RNAP). The predictions of the model are in good agreement with a recent quantitative in vivo study of convergent promoters in E.coli. Our analysis predicts that strong occlusion requires the interfering promoter to be very strong. Collisions can also produce strong interference but only if the interfering promoter is very strong or if the convergent promoters are far apart ({$>$}200bp). For moderate strength interfering promoters and short inter-promoter distances, strong interference is dependent on the sitting duck mechanism. Sitting duck interference is dependent on the relative strengths of the two promoters. However, it is also dependent on the “aspect ratio” (the relative rates of RNAP binding and firing) of the sensitive promoter, allowing promoters of equal strength to have very different sensitivities to transcriptional interference. The model provides a framework for using transcriptional interference to investigate various dynamic processes on DNA in vivo.}
+      \field{day}{18}
+      \field{issn}{0022-2836}
+      \field{journaltitle}{Journal of Molecular Biology}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{note}{00092}
+      \field{number}{2}
+      \field{title}{A {{Mathematical Model}} for {{Transcriptional Interference}} by {{RNA Polymerase Traffic}} in {{Escherichia}} Coli}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{volume}{346}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{399\bibrangedash 409}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.jmb.2004.11.075
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Sneppen et al\\Sneppen et al-2005-A Mathematical Model for Transcriptional Interference by RNA Polymerase Traffic.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022283604015566
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022283604015566
+      \endverb
+      \keyw{collision,occlusion,RNA polymerase,sitting duck,transcriptional interference}
+    \endentry
+    \entry{gorochowski_GeneticCircuitCharacterization_2017}{article}{}
+      \name{author}{8}{}{%
+        {{hash=41e876f187cc1eb1fa6bb4b3a7001f11}{%
+           family={Gorochowski},
+           familyi={G\bibinitperiod},
+           given={Thomas\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=1f5552dc4adbd0468f085f37495f4745}{%
+           family={Borujeni},
+           familyi={B\bibinitperiod},
+           given={Amin\bibnamedelima Espah},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d64509f579d48ea51f95b8a783e83a57}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Yongjin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2591fc3dd3bc8107a934ca50b4ba6447}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Alec\bibnamedelima AK},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=948f26b38fba102b6f820808e554bc53}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=53c4bcdb5cc4eafa79fc0d5d2512f152}{%
+           family={Der},
+           familyi={D\bibinitperiod},
+           given={Bryan\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b308eaa620519de58fabed4004f661d4}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi Benjamin},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=ecb7f9b68090201ca38185fea8d97537}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \strng{fullhash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \strng{bibnamehash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \strng{authorbibnamehash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \strng{authornamehash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \strng{authorfullhash}{6cce14c8faab3ea8b8e34439c0acee90}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic circuits implement computational operations within a cell. Debugging them is difficult because their function is defined by multiple states (e.g., combinations of inputs) that vary in time. Here, we develop RNA‐seq methods that enable the simultaneous measurement of: (i) the states of internal gates, (ii) part performance (promoters, insulators, terminators), and (iii) impact on host gene expression. This is applied to a three‐input one‐output circuit consisting of three sensors, five NOR/NOT gates, and 46 genetic parts. Transcription profiles are obtained for all eight combinations of inputs, from which biophysical models can extract part activities and the response functions of sensors and gates. Various unexpected failure modes are identified, including cryptic antisense promoters, terminator failure, and a sensor malfunction due to media‐induced changes in host gene expression. This can guide the selection of new parts to fix these problems, which we demonstrate by using a bidirectional terminator to disrupt observed antisense transcription. This work introduces RNA‐seq as a powerful method for circuit characterization and debugging that overcomes the limitations of fluorescent reporters and scales to large systems composed of many parts. Synopsis {$<$}img class="highwire-embed" alt="Embedded Image" src="http://msb.embopress.org/sites/default/files/highwire/msb/13/11/952/embed/graphic-1.gif"/{$>$} Biophysical models based on RNA‐seq are developed to observe the internal workings of genetic circuits, and measure part performance, gate state, and impact on host gene expression. The approach is applied to analyze and debug a large genetic logic circuit. Methods are developed to convert raw RNA‐seq data into transcription profiles that capture steady‐state RNA polymerase (RNAP) flux.RNAP flux, the common signal carrier between sensors and gates, can be calculated over the length of the circuit.Equations are derived to characterize part performance from changes in the transcription profiles.RNA‐seq data from a large genetic logic circuit is processed and their analysis reveals failures in the form of cryptic promoters, antisense transcription, terminator breakdown and sensor malfunction for differing growth conditions.}
+      \field{day}{1}
+      \field{issn}{1744-4292, 1744-4292}
+      \field{journaltitle}{Mol. Syst. Biol.}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Genetic Circuit Characterization and Debugging Using {{RNA}}‐seq}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2019}
+      \field{volume}{13}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{952}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.15252/msb.20167461
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Gorochowski et al\\Gorochowski et al-2017-Genetic circuit characterization and debugging using RNA‐seq.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://msb.embopress.org/content/13/11/952
+      \endverb
+      \verb{url}
+      \verb http://msb.embopress.org/content/13/11/952
+      \endverb
+      \keyw{biofab,combinatorial logic,debugging,omics,synthetic biology,systems biology}
+    \endentry
+    \entry{wang_RNASeqRevolutionaryTool_2009}{article}{}
+      \name{author}{3}{}{%
+        {{hash=10ab780c0050bfdb77a41a04becba9aa}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=10861ddc78f5e9ff8cf15cfae8e92a88}{%
+           family={Gerstein},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7d041659633e29317689385f227d3173}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \strng{fullhash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \strng{bibnamehash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \strng{authorbibnamehash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \strng{authornamehash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \strng{authorfullhash}{cb7b5536b304af7ec5c18336ff1705bb}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{RNA-Seq is a recently developed approach to transcriptome profiling that uses deep-sequencing technologies. Studies using this method have already altered our view of the extent and complexity of eukaryotic transcriptomes. RNA-Seq also provides a far more precise measurement of levels of transcripts and their isoforms than other methods. This article describes the RNA-Seq approach, the challenges associated with its application, and the advances made so far in characterizing several eukaryote transcriptomes.}
+      \field{issn}{1471-0064}
+      \field{journaltitle}{Nat. Rev. Genet.}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shorttitle}{{{RNA}}-{{Seq}}}
+      \field{title}{{{RNA}}-{{Seq}}: A Revolutionary Tool for Transcriptomics}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{57\bibrangedash 63}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nrg2484
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Wang et al\\Wang et al-2009-RNA-Seq.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/nrg2484
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/nrg2484
+      \endverb
+    \endentry
+    \entry{xiang_ScalingGeneticCircuit_2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=52c9d8373727ff1cce2b0c8be3c359a8}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Yiyu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6fa68222a7974921420cc3342bfb3f47}{%
+           family={Dalchau},
+           familyi={D\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8062ac24d5437ff06150464203919e82}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Baojun},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ce86d0237934684bd52554586cfb339}
+      \strng{fullhash}{5ce86d0237934684bd52554586cfb339}
+      \strng{bibnamehash}{5ce86d0237934684bd52554586cfb339}
+      \strng{authorbibnamehash}{5ce86d0237934684bd52554586cfb339}
+      \strng{authornamehash}{5ce86d0237934684bd52554586cfb339}
+      \strng{authorfullhash}{5ce86d0237934684bd52554586cfb339}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Synthetic biology aims to engineer and redesign biological systems for useful real-world applications in biomanufacturing, biosensing and biotherapy following a typical design-build-test cycle. Inspired from computer science and electronics, synthetic gene circuits have been designed to exhibit control over the flow of information in biological systems. Two types are Boolean logic inspired TRUE or FALSE digital logic and graded analog computation. Key principles for gene circuit engineering include modularity, orthogonality, predictability~and reliability. Initial circuits in the field were small and hampered by a lack of modular and orthogonal components, however in recent years the library of available parts has increased vastly. New tools for high throughput DNA assembly and characterization have been developed enabling rapid prototyping, systematic in situ characterization, as well as automated design and assembly of circuits. Recently implemented computing paradigms in circuit memory and distributed computing using cell consortia will also be discussed. Finally, we will examine existing challenges in building predictable large-scale circuits including modularity, context dependency and metabolic burden as well as tools and methods used to resolve them. These new trends and techniques have the potential to accelerate design of larger gene circuits and result in an increase in our basic understanding of circuit and host behaviour.}
+      \field{issn}{1567-7818}
+      \field{journaltitle}{Nat. Comput.}
+      \field{number}{4}
+      \field{shorttitle}{Scaling up Genetic Circuit Design for Cellular Computing}
+      \field{title}{Scaling up Genetic Circuit Design for Cellular Computing: Advances and Prospects}
+      \field{urlday}{2}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{17}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{833\bibrangedash 853}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/s11047-018-9715-9
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Xiang et al\\Xiang et al-2018-Scaling up genetic circuit design for cellular computing2.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6244767/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6244767/
+      \endverb
+    \endentry
+    \entry{gander_DigitalLogicCircuits_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=471d8dbb35eea4bc2a064bc4d797c2f6}{%
+           family={Gander},
+           familyi={G\bibinitperiod},
+           given={Miles\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e9f2d9c8ec57b06578a37ea78bcc84e7}{%
+           family={Vrana},
+           familyi={V\bibinitperiod},
+           given={Justin\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=dd6bbe0715c39dfbf27699c460f1e3d2}{%
+           family={Voje},
+           familyi={V\bibinitperiod},
+           given={William\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=a5a69f292a9ac76516ba3afd2b0a0865}{%
+           family={Carothers},
+           familyi={C\bibinitperiod},
+           given={James\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ff389ecdbdfc5e473309c319939313c6}{%
+           family={Klavins},
+           familyi={K\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \strng{fullhash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \strng{bibnamehash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \strng{authorbibnamehash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \strng{authornamehash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \strng{authorfullhash}{0c582ac1c96c769bee41a0d73f5e7f36}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Natural genetic circuits enable cells to make sophisticated digital decisions. Building equally complex synthetic circuits in eukaryotes remains difficult, however, because commonly used components leak transcriptionally, do not arbitrarily interconnect or do not have digital responses. Here, we designed dCas9-Mxi1-based NOR gates in Saccharomyces cerevisiae that allow arbitrary connectivity and large genetic circuits. Because we used the chromatin remodeller Mxi1, our gates showed minimal leak and digital responses. We built a combinatorial library of NOR gates that directly convert guide RNA (gRNA) inputs into gRNA outputs, enabling the gates to be ‘wired’ together. We constructed logic circuits with up to seven gRNAs, including repression cascades with up to seven layers. Modelling predicted the NOR gates have effectively zero transcriptional leak explaining the limited signal degradation in the circuits. Our approach enabled the largest, eukaryotic gene circuits to date and will form the basis for large, synthetic, cellular decision-making systems.}
+      \field{day}{25}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nat. Commun.}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{title}{Digital Logic Circuits in Yeast with {{CRISPR}}-{{dCas9 NOR}} Gates}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{15459}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/ncomms15459
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Gander et al\\Gander et al-2017-Digital logic circuits in yeast with CRISPR-dCas9 NOR gates.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nature.com/articles/ncomms15459
+      \endverb
+      \verb{url}
+      \verb http://www.nature.com/articles/ncomms15459
+      \endverb
+    \endentry
+    \entry{didovyk_TranscriptionalRegulationCRISPRCas9_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9ed8ef9d0d90411ae777be580a0f4eff}{%
+           family={Didovyk},
+           familyi={D\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3e542457dcbadec855bdfc8b1beb1a9c}{%
+           family={Borek},
+           familyi={B\bibinitperiod},
+           given={Bartłomiej},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c1432205cf5e3213e7cc5084a1257652}{%
+           family={Tsimring},
+           familyi={T\bibinitperiod},
+           given={Lev},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e292c7aa7ea70e8e77abd3134400fa1a}{%
+           family={Hasty},
+           familyi={H\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d9095418a3f226864d8cb27685ce7a8}
+      \strng{fullhash}{4d9095418a3f226864d8cb27685ce7a8}
+      \strng{bibnamehash}{4d9095418a3f226864d8cb27685ce7a8}
+      \strng{authorbibnamehash}{4d9095418a3f226864d8cb27685ce7a8}
+      \strng{authornamehash}{4d9095418a3f226864d8cb27685ce7a8}
+      \strng{authorfullhash}{4d9095418a3f226864d8cb27685ce7a8}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{CRISPR-Cas9 has recently emerged as a promising system for multiplexed genome editing as well as epigenome and transcriptome perturbation. Due to its specificity, ease of use and highly modular programmable nature, it has been widely adopted for a variety of applications such as genome editing, transcriptional inhibition and activation, genetic screening, DNA localization imaging, and many more. In this review, we will discuss non-editing applications of CRISPR-Cas9 for transcriptome perturbation, metabolic engineering, and synthetic biology.}
+      \field{day}{1}
+      \field{issn}{0958-1669}
+      \field{journaltitle}{Curr. Opin. Biotech.}
+      \field{month}{8}
+      \field{series}{Tissue, Cell \& Pathway Engineering (2016)}
+      \field{shorttitle}{Transcriptional Regulation with {{CRISPR}}-{{Cas9}}}
+      \field{title}{Transcriptional Regulation with {{CRISPR}}-{{Cas9}}: Principles, Advances, and Applications}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{40}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{177\bibrangedash 184}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.copbio.2016.06.003
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Didovyk et al\\Didovyk et al-2016-Transcriptional regulation with CRISPR-Cas9.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0958166916301537
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0958166916301537
+      \endverb
+    \endentry
+    \entry{gilbert_CRISPRmediatedModularRNAguided_2013}{article}{}
+      \name{author}{13}{}{%
+        {{hash=20159fd10b57451a1f4d46d6a522ce9c}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Luke\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=febd7bd48802be787d20df89103b717a}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Matthew\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=17b47fb37bace17410463b082f4cac87}{%
+           family={Morsut},
+           familyi={M\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2ea6fa386f17fd17c12ccef76e189724}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zairan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0213f0283e52f945578e6088a28b0dcc}{%
+           family={Brar},
+           familyi={B\bibinitperiod},
+           given={Gloria\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6101487cd00ba0b104d5bea42452d7d3}{%
+           family={Torres},
+           familyi={T\bibinitperiod},
+           given={Sandra\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=60f53e7172c42fd3221d199056b8a043}{%
+           family={Stern-Ginossar},
+           familyi={S\bibinithyphendelim G\bibinitperiod},
+           given={Noam},
+           giveni={N\bibinitperiod}}}%
+        {{hash=dc18873fecc146db1f7797f81235ab1c}{%
+           family={Brandman},
+           familyi={B\bibinitperiod},
+           given={Onn},
+           giveni={O\bibinitperiod}}}%
+        {{hash=703d9e59aa4c62474cd4a35eba2e5685}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={Evan\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=db6ee88c2505c20e204e8ea38dc1a7ed}{%
+           family={Doudna},
+           familyi={D\bibinitperiod},
+           given={Jennifer\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=76cbee2f6db2498c8e3ac054eb81a844}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Wendell\bibnamedelima A.},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=74c573dc8c9789e46a23280e7c39abc8}{%
+           family={Weissman},
+           familyi={W\bibinitperiod},
+           given={Jonathan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7dad7cfeabf2454f3a2cb672debf6edb}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Lei\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \strng{fullhash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \strng{bibnamehash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \strng{authorbibnamehash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \strng{authornamehash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \strng{authorfullhash}{2ed85bd021f42c7df2c9e110b5077b88}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary The genetic interrogation and reprogramming of cells requires methods for robust and precise targeting of genes for expression or repression. The CRISPR-associated catalytically inactive dCas9 protein offers a general platform for RNA-guided DNA targeting. Here, we show that fusion of dCas9 to effector domains with distinct regulatory functions enables stable and efficient transcriptional repression or activation in human and yeast cells, with the site of delivery determined solely by a coexpressed short guide (sg)RNA. Coupling of dCas9 to a transcriptional repressor domain can robustly silence expression of multiple endogenous genes. RNA-seq analysis indicates that CRISPR interference (CRISPRi)-mediated transcriptional repression is highly specific. Our results establish that the CRISPR system can be used as a modular and flexible DNA-binding platform for the recruitment of proteins to a target DNA sequence, revealing the potential of CRISPRi as a general tool for the precise regulation of gene expression in eukaryotic cells.}
+      \field{day}{18}
+      \field{issn}{0092-8674}
+      \field{journaltitle}{Cell}
+      \field{month}{7}
+      \field{number}{2}
+      \field{title}{{{CRISPR}}-Mediated Modular {{RNA}}-Guided Regulation of Transcription in {{Eukaryotes}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{154}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{442\bibrangedash 451}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.cell.2013.06.044
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Gilbert et al\\Gilbert et al-2013-CRISPR-Mediated Modular RNA-Guided Regulation of Transcription in Eukaryotes.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S009286741300826X
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S009286741300826X
+      \endverb
+    \endentry
+    \entry{nielsen_MultiInputCRISPR_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2591fc3dd3bc8107a934ca50b4ba6447}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Alec\bibnamedelima AK},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ecb7f9b68090201ca38185fea8d97537}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \strng{fullhash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \strng{bibnamehash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \strng{authorbibnamehash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \strng{authornamehash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \strng{authorfullhash}{cb61f76dbb0cf7f69abd0e970f552e49}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Genetic circuits require many regulatory parts in order to implement signal processing or execute algorithms in cells. A potentially scalable approach is to use dCas9, which employs small guide RNAs (sgRNAs) to repress genetic loci via the programmability of RNA:DNA base pairing. To this end, we use dCas9 and designed sgRNAs to build transcriptional logic gates and connect them to perform computation in living cells. We constructed a set of NOT gates by designing five synthetic Escherichia coli σ70 promoters that are repressed by corresponding sgRNAs, and these interactions do not exhibit crosstalk between each other. These sgRNAs exhibit high on‐target repression (56‐ to 440‐fold) and negligible off‐target interactions ({$<$} 1.3‐fold). These gates were connected to build larger circuits, including the Boolean‐complete NOR gate and a 3‐gate circuit consisting of four layered sgRNAs. The synthetic circuits were connected to the native E. coli regulatory network by designing output sgRNAs to target an E. coli transcription factor (malT). This converts the output of a synthetic circuit to a switch in cellular phenotype (sugar utilization, chemotaxis, phage resistance). Synopsis {$<$}img class="highwire-embed" alt="Embedded Image" src="http://msb.embopress.org/sites/default/files/highwire/msb/10/11/763/embed/graphic-1.gif"/{$>$} Genetic gates are assembled based on dCas9 and engineered small guide RNAs (sgRNAs) that drive Cas9 to target promoters. These transcriptional gates are linked to build larger genetic circuits that are connected to the natural regulatory network of the cell. Synthetic promoters and cognate sgRNAs exhibit large dynamic range and negligible crosstalk.sgRNA‐based NOT gate response functions are non‐cooperative and quantitatively different from those based on transcriptional repressors.Multi‐input logic gates are constructed by layering orthogonal sgRNAs.Host regulatory networks can be interfaced through the design of sgRNA circuit outputs targeted to native transcription factors.}
+      \field{day}{1}
+      \field{issn}{1744-4292, 1744-4292}
+      \field{journaltitle}{Mol. Syst. Biol.}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Multi‐input {{CRISPR}}/{{Cas}} Genetic Circuits That Interface Host Regulatory Networks}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{10}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{763}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.15252/msb.20145735
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Nielsen_Voigt\\Nielsen_Voigt-2014-Multi‐input CRISPR-Cas genetic circuits that interface host regulatory networks.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://msb.embopress.org/content/10/11/763
+      \endverb
+      \verb{url}
+      \verb http://msb.embopress.org/content/10/11/763
+      \endverb
+      \keyw{CRISPR,genetic compiler,synthetic biology,TALE,TetR homologue}
+    \endentry
+    \entry{qi_RepurposingCRISPRRNAguided_2013}{article}{}
+      \name{author}{7}{}{%
+        {{hash=7dad7cfeabf2454f3a2cb672debf6edb}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Lei\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=febd7bd48802be787d20df89103b717a}{%
+           family={Larson},
+           familyi={L\bibinitperiod},
+           given={Matthew\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=20159fd10b57451a1f4d46d6a522ce9c}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Luke\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=db6ee88c2505c20e204e8ea38dc1a7ed}{%
+           family={Doudna},
+           familyi={D\bibinitperiod},
+           given={Jennifer\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=74c573dc8c9789e46a23280e7c39abc8}{%
+           family={Weissman},
+           familyi={W\bibinitperiod},
+           given={Jonathan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3884636e9e301b5b70daad17c42a6555}{%
+           family={Arkin},
+           familyi={A\bibinitperiod},
+           given={Adam\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=76cbee2f6db2498c8e3ac054eb81a844}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Wendell\bibnamedelima A.},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{57ecef65173cb2e87524b77a5c5813b9}
+      \strng{fullhash}{57ecef65173cb2e87524b77a5c5813b9}
+      \strng{bibnamehash}{57ecef65173cb2e87524b77a5c5813b9}
+      \strng{authorbibnamehash}{57ecef65173cb2e87524b77a5c5813b9}
+      \strng{authornamehash}{57ecef65173cb2e87524b77a5c5813b9}
+      \strng{authorfullhash}{57ecef65173cb2e87524b77a5c5813b9}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Targeted gene regulation on a genome-wide scale is~a powerful strategy for interrogating, perturbing, and engineering cellular systems. Here, we develop a method for controlling gene expression based on Cas9, an RNA-guided DNA endonuclease from a type II CRISPR system. We show that a catalytically dead Cas9 lacking endonuclease activity, when coexpressed with a guide RNA, generates a DNA recognition complex that can specifically interfere with transcriptional elongation, RNA polymerase binding, or transcription factor binding. This system, which we call CRISPR interference (CRISPRi), can efficiently repress expression of targeted genes in Escherichia coli, with no detectable off-target effects. CRISPRi can be used to repress multiple target genes simultaneously, and its effects are reversible. We also show evidence that the system can be adapted for gene repression in mammalian cells. This RNA-guided DNA recognition platform provides a simple approach for selectively perturbing gene expression on a genome-wide scale.}
+      \field{day}{28}
+      \field{issn}{1097-4172}
+      \field{journaltitle}{Cell}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{5}
+      \field{title}{Repurposing {{CRISPR}} as an {{RNA}}-Guided Platform for Sequence-Specific Control of Gene Expression}
+      \field{volume}{152}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{1173\bibrangedash 1183}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1016/j.cell.2013.02.022
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Qi et al\\Qi et al-2013-Repurposing CRISPR as an RNA-guided platform for sequence-specific control of.pdf
+      \endverb
+      \keyw{Endodeoxyribonucleases,Escherichia coli,Gene Expression,Gene Knockdown Techniques,RNA Interference,RNA; Guide,Streptococcus pyogenes,Transcription Elongation; Genetic,Transcription Initiation; Genetic}
+    \endentry
+    \entry{brzozowski_AlgebrasHazardDetection_2001}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=6a7d88dfdc8ac8ac3b3f82279ffdba08}{%
+           family={Brzozowski},
+           familyi={B\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=11b7af3b9aaa38b84f215d4d574090cc}{%
+           family={Esik},
+           familyi={E\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=776f66282e16935769aecf46da0f2263}{%
+           family={Iland},
+           familyi={I\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a1da423659c49f60480c52b0c47d432}
+      \strng{fullhash}{9a1da423659c49f60480c52b0c47d432}
+      \strng{bibnamehash}{9a1da423659c49f60480c52b0c47d432}
+      \strng{authorbibnamehash}{9a1da423659c49f60480c52b0c47d432}
+      \strng{authornamehash}{9a1da423659c49f60480c52b0c47d432}
+      \strng{authorfullhash}{9a1da423659c49f60480c52b0c47d432}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Hazards pulses are undesirable short pulses caused by stray delays in digital circuits. Such pulses not only may cause errors in the circuit operation, but also consume energy, and add to the computation time. It is therefore very important to detect hazards in circuit designs. Two-valued Boolean algebra, which is commonly used for the analysis and synthesis of digital circuits, cannot detect hazard conditions directly. To overcome this limitation several multi-valued algebras have been proposed for hazard detection. This paper surveys these algebras, and studies their mathematical properties. Also, some recent results unifying most of the multi-valued algebras presented in the literature are described. Our attention in this paper is restricted to the study of static and dynamic hazards in gate circuits.}
+      \field{booktitle}{Proceedings 31st {{IEEE International Symposium}} on {{Multiple}}-{{Valued Logic}}}
+      \field{eventtitle}{Proceedings 31st {{IEEE International Symposium}} on {{Multiple}}-{{Valued Logic}}}
+      \field{month}{5}
+      \field{title}{Algebras for Hazard Detection}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{3\bibrangedash 12}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/ISMVL.2001.924548
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Brzozowski et al\\Brzozowski et al-2001-Algebras for hazard detection.pdf;C\:\\Users\\elros\\Zotero\\storage\\PCI4AIPA\\Brzozowski et al-2001-Algebras for hazard detection.pdf
+      \endverb
+      \keyw{Books,Boolean algebra,Circuit analysis,Circuit synthesis,computation time,Computer errors,Computer science,Delay,delays,digital circuits,Digital circuits,dynamic hazards,gate circuits,hazard detection algebra,Hazards,hazards and race conditions,mathematical properties,multi-valued algebras,multivalued logic,Pulse circuits,static hazards,two-valued Boolean algebra}
+    \endentry
+    \entry{brzozowski_HazardAlgebras_2003}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e26f1e697dffaf3af58dbf0cdac2bc23}{%
+           family={Brzozowski},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=74578d4a3b98df6c26bec58e27c08fc2}{%
+           family={Ésik},
+           familyi={É\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \strng{fullhash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \strng{bibnamehash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \strng{authorbibnamehash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \strng{authornamehash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \strng{authorfullhash}{889d8da1d48410ad79da7d5dad6ac8f3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce algebras capable of representing, detecting, identifying, and counting static and dynamic hazard pulses that can occur in the worst case on any wire in a gate circuit. These algebras also permit us to count the worst-case number of signal changes on any wire. This is of interest to logic designers for two reasons: each signal change consumes energy, and unnecessary multiple signal changes slow down the circuit operation. We describe efficient circuit simulation algorithms based on our algebras and illustrate them by several examples. Our method generalizes Eichelberger's ternary simulation and several other algebras designed for hazard detection.}
+      \field{day}{1}
+      \field{issn}{1572-8102}
+      \field{journaltitle}{Formal Methods in System Design}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{3}
+      \field{title}{Hazard {{Algebras}}}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2019}
+      \field{volume}{23}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{223\bibrangedash 256}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1023/A:1026218512171
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Brzozowski_Ésik\\Brzozowski_Ésik-2003-Hazard Algebras.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1026218512171
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1026218512171
+      \endverb
+      \keyw{algebra,circuit,gate,hazard,multivalued,simulation,transient}
+    \endentry
+    \entry{marchisio_AutomaticDesignDigital_2011}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a9e9007f9fa8cefdcc0ceeb717a18e69}{%
+           family={Marchisio},
+           familyi={M\bibinitperiod},
+           given={Mario\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d17c9f048caccd96dd096bbf2383a878}{%
+           family={Stelling},
+           familyi={S\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \strng{fullhash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \strng{bibnamehash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \strng{authorbibnamehash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \strng{authornamehash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \strng{authorfullhash}{4ac54de20cb6c57f4190c3ec9d80f276}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{De novo computational design of synthetic gene circuits that achieve well-defined target functions is a hard task. Existing, brute-force approaches run optimization algorithms on the structure and on the kinetic parameter values of the network. However, more direct rational methods for automatic circuit design are lacking. Focusing on digital synthetic gene circuits, we developed a methodology and a corresponding tool for in silico automatic design. For a given truth table that specifies a circuit's input–output relations, our algorithm generates and ranks several possible circuit schemes without the need for any optimization. Logic behavior is reproduced by the action of regulatory factors and chemicals on the promoters and on the ribosome binding sites of biological Boolean gates. Simulations of circuits with up to four inputs show a faithful and unequivocal truth table representation, even under parametric perturbations and stochastic noise. A comparison with already implemented circuits, in addition, reveals the potential for simpler designs with the same function. Therefore, we expect the method to help both in devising new circuits and in simplifying existing solutions.}
+      \field{day}{17}
+      \field{issn}{1553-7358}
+      \field{journaltitle}{PLoS Comput. Biol.}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Automatic Design of Digital Synthetic Gene Circuits}
+      \field{urlday}{20}
+      \field{urlmonth}{2}
+      \field{urlyear}{2019}
+      \field{volume}{7}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e1001083}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pcbi.1001083
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Marchisio_Stelling\\Marchisio_Stelling-2011-Automatic Design of Digital Synthetic Gene Circuits.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1001083
+      \endverb
+      \verb{url}
+      \verb https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1001083
+      \endverb
+      \keyw{DNA transcription,Electrical circuits,Logic circuits,Messenger RNA,Optimization,Signal processing,Synthetic genetic networks,Transcription factors}
+    \endentry
+    \entry{marchisio_PartsPoolsFramework_2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5a788c18f05c042e65b0e982938cbef7}{%
+           family={Marchisio},
+           familyi={M\bibinitperiod},
+           given={Mario\bibnamedelima Andrea},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a788c18f05c042e65b0e982938cbef7}
+      \strng{fullhash}{5a788c18f05c042e65b0e982938cbef7}
+      \strng{bibnamehash}{5a788c18f05c042e65b0e982938cbef7}
+      \strng{authorbibnamehash}{5a788c18f05c042e65b0e982938cbef7}
+      \strng{authornamehash}{5a788c18f05c042e65b0e982938cbef7}
+      \strng{authorfullhash}{5a788c18f05c042e65b0e982938cbef7}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Published in 2008, Parts \& Pools represents one of the □first attempts to conceptualize the modular design of bacterial synthetic gene circuits with Standard Biological Parts (DNA segments) and Pools of molecules referred to as common signal carriers (e.g. RNA polymerases and ribosomes). The original framework for modeling bacterial components and designing prokaryotic circuits evolved over the last years and brought, fi□rst, to the development of an algorithm for the automatic design of Boolean gene circuits. This is a remarkable achievement since gene digital circuits have a broad range of applications that goes from biosensors for health and environment care to computational devices. More recently, Parts \& Pools was enabled to give a proper formal description of eukaryotic biological circuit components. This was possible by employing a rule-based modeling approach, a technique that permits a faithful calculation of all the species and reactions involved in complex systems such as eukaryotic cells and compartments. In this way, Parts \& Pools is currently suitable for the visual and modular design of synthetic gene circuits in yeast and mammalian cells too.}
+      \field{issn}{2296-4185}
+      \field{journaltitle}{Front. Bioeng. Biotechnol.}
+      \field{langid}{english}
+      \field{shorttitle}{Parts \& {{Pools}}}
+      \field{title}{Parts \& Pools: {{A}} Framework for Modular Design of Synthetic Gene Circuits}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{2}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3389/fbioe.2014.00042
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Marchisio\\Marchisio-2014-Parts & Pools.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/fbioe.2014.00042/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/fbioe.2014.00042/full
+      \endverb
+      \keyw{Boolean gates,gene circuits,modeling,parts,Pools,Synthetic Biology}
+    \endentry
+    \entry{elowitz_StochasticGeneExpression_2002}{article}{}
+      \name{author}{4}{}{%
+        {{hash=172d917eef79d80ede6ac97ef3cfb264}{%
+           family={Elowitz},
+           familyi={E\bibinitperiod},
+           given={Michael\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7cff54519aaf69cd3a95abd91fc0a1b2}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Arnold\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=232fe6f0d8549f2fe8607cc9ff28dda1}{%
+           family={Siggia},
+           familyi={S\bibinitperiod},
+           given={Eric\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=654a2b16a78ef3f2363bd043c12ee9d9}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima S.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \strng{fullhash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \strng{bibnamehash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \strng{authorbibnamehash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \strng{authornamehash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \strng{authorfullhash}{3c1d4497b80d1bcc8a01e34b70d75cfa}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Clonal populations of cells exhibit substantial phenotypic variation. Such heterogeneity can be essential for many biological processes and is conjectured to arise from stochasticity, or noise, in gene expression. We constructed strains of Escherichia coli that enable detection of noise and discrimination between the two mechanisms by which it is generated. Both stochasticity inherent in the biochemical process of gene expression (intrinsic noise) and fluctuations in other cellular components (extrinsic noise) contribute substantially to overall variation. Transcription rate, regulatory dynamics, and genetic factors control the amplitude of noise. These results establish a quantitative foundation for modeling noise in genetic networks and reveal how low intracellular copy numbers of molecules can fundamentally limit the precision of gene regulation.}
+      \field{day}{16}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{5584}
+      \field{title}{Stochastic Gene Expression in a Single Cell}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{297}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1183\bibrangedash 1186}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1070919
+      \endverb
+      \verb{urlraw}
+      \verb https://science.sciencemag.org/content/297/5584/1183
+      \endverb
+      \verb{url}
+      \verb https://science.sciencemag.org/content/297/5584/1183
+      \endverb
+    \endentry
+    \entry{purnick_SecondWaveSynthetic_2009}{article}{}
+      \name{author}{2}{}{%
+        {{hash=68968b48808e8bf241c01cd0f935f410}{%
+           family={Purnick},
+           familyi={P\bibinitperiod},
+           given={Priscilla\bibnamedelimb E.\bibnamedelimi M.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=89d698773eaf2fae761ff0008031c7be}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb863929d446ab9ffdd6247df492cce2}
+      \strng{fullhash}{cb863929d446ab9ffdd6247df492cce2}
+      \strng{bibnamehash}{cb863929d446ab9ffdd6247df492cce2}
+      \strng{authorbibnamehash}{cb863929d446ab9ffdd6247df492cce2}
+      \strng{authornamehash}{cb863929d446ab9ffdd6247df492cce2}
+      \strng{authorfullhash}{cb863929d446ab9ffdd6247df492cce2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Synthetic biology is a research field that combines the investigative nature of biology with the constructive nature of engineering. Efforts in synthetic biology have largely focused on the creation and perfection of genetic devices and small modules that are constructed from these devices. But to view cells as true 'programmable' entities, it is now essential to develop effective strategies for assembling devices and modules into intricate, customizable larger scale systems. The ability to create such systems will result in innovative approaches to a wide range of applications, such as bioremediation, sustainable energy production and biomedical therapies.}
+      \field{issn}{1471-0080}
+      \field{journaltitle}{Nat. Rev. Mol. Cell Biol.}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{6}
+      \field{shorttitle}{The Second Wave of Synthetic Biology}
+      \field{title}{The Second Wave of Synthetic Biology: From Modules to Systems}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2018}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{410\bibrangedash 422}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1038/nrm2698
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Purnick_Weiss\\Purnick_Weiss-2009-The second wave of synthetic biology.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nrm2698
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nrm2698
+      \endverb
+    \endentry
+    \entry{kaznessis_ModelsSyntheticBiology_2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=966c84aa7d897ae7d7d46a47a0b7a241}{%
+           family={Kaznessis},
+           familyi={K\bibinitperiod},
+           given={Yiannis\bibnamedelima N.},
+           giveni={Y\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \strng{fullhash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \strng{bibnamehash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \strng{authorbibnamehash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \strng{authornamehash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \strng{authorfullhash}{966c84aa7d897ae7d7d46a47a0b7a241}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Synthetic biological engineering is emerging from biology as a distinct discipline based on quantification. The technologies propelling synthetic biology are not new, nor is the concept of designing novel biological molecules. What is new is the emphasis on system behavior.}
+      \field{day}{6}
+      \field{issn}{1752-0509}
+      \field{journaltitle}{BMC Syst. Biol.}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{Models for Synthetic Biology}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2019}
+      \field{volume}{1}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{47}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1752-0509-1-47
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Kaznessis\\Kaznessis-2007-Models for synthetic biology2.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1186/1752-0509-1-47
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1186/1752-0509-1-47
+      \endverb
+    \endentry
+    \entry{crook_ModelbasedDesignSynthetic_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fef1a3945995828fedd4ffa59e28a015}{%
+           family={Crook},
+           familyi={C\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=92737c9bcf6ec28bbb6bb6dc0f4a6af3}{%
+           family={Alper},
+           familyi={A\bibinitperiod},
+           given={Hal\bibnamedelima S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1bd781b59e190f77040640fa8c6bcfce}
+      \strng{fullhash}{1bd781b59e190f77040640fa8c6bcfce}
+      \strng{bibnamehash}{1bd781b59e190f77040640fa8c6bcfce}
+      \strng{authorbibnamehash}{1bd781b59e190f77040640fa8c6bcfce}
+      \strng{authornamehash}{1bd781b59e190f77040640fa8c6bcfce}
+      \strng{authorfullhash}{1bd781b59e190f77040640fa8c6bcfce}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Synthetic biology brings engineering tools and perspectives to the design of living systems. In contrast to classical cell engineering approaches, synthetic biology enables cellular networks to be understood as a combination of modular elements in much the same way as unit operations combine to describe a chemical plant. Consequently, models for the behavior of these designed systems are inspired by frameworks developed for traditional chemical engineering design. There are direct analogies between cellular metabolism and reaction networks in a chemical process. As examples, thermodynamic and kinetic models of chemical reaction networks have been used to simulate fluxes within living systems and predict the performance of synthetic parts. Concepts from process control have been brought to bear on the design of transcriptional and translational regulatory networks. Such engineering frameworks have greatly aided the design and understanding of living systems and have enabled the design of cells exhibiting complex dynamic behavior and high productivity of desirable compounds. This review summarizes efforts to quantitatively model cellular behavior (both endogenous and synthetic), especially as related to the design of living systems.}
+      \field{day}{15}
+      \field{issn}{0009-2509}
+      \field{journaltitle}{Chem. Eng. Sci.}
+      \field{month}{11}
+      \field{series}{Synthetic {{Biology}}}
+      \field{title}{Model-Based Design of Synthetic, Biological Systems}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2019}
+      \field{volume}{103}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2\bibrangedash 11}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.ces.2012.12.022
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Crook_Alper\\Crook_Alper-2013-Model-based design of synthetic, biological systems.pdf;C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Crook_Alper\\Crook_Alper-2013-Model-based design of synthetic, biological systems2.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0009250912007130
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0009250912007130
+      \endverb
+      \keyw{Biological and biomolecular engineering,Cellular biology and engineering,Mathematical modeling,Metabolism,Molecular biology,Synthetic biology}
+    \endentry
+    \entry{fontanarrosa_AnalyzingGeneticCircuits_2019}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=0a7774dc97db4798d0e4e8129d743360}{%
+           family={Fontanarrosa},
+           familyi={F\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e2fdd3b69ba49fbcdfd1cdbf25d155e3}{%
+           family={Hosseini},
+           familyi={H\bibinitperiod},
+           given={Hamid},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0c6958b8d8d941f88f590d7f826341b3}{%
+           family={Borujeni},
+           familyi={B\bibinitperiod},
+           given={Amin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3fe136b69e6b67e3b6433150d17a4aeb}{%
+           family={Dorfan},
+           familyi={D\bibinitperiod},
+           given={Yuval},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2eff34a71013404e1a920c517fc52cec}{%
+           family={Voigt},
+           familyi={V\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cda3c6c6e2ef7b4ff61916789cdc4ce6}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \strng{namehash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \strng{fullhash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \strng{bibnamehash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \strng{authorbibnamehash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \strng{authornamehash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \strng{authorfullhash}{d8f19bc13c882ffbd2ff3caf3a2beba5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{11th International Workshop on Bio-Design Automation}
+      \field{day}{8}
+      \field{endday}{10}
+      \field{endmonth}{7}
+      \field{endyear}{2019}
+      \field{month}{7}
+      \field{title}{Analyzing Genetic Circuits for Hazards and Glitches}
+      \field{year}{2019}
+      \field{enddateera}{ce}
+      \field{dateera}{ce}
+      \field{pages}{32\bibrangedash 33}
+      \range{pages}{2}
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Fontanarrosa et al\\Fontanarrosa et al-2019-Analyzing genetic circuits for hazards and glitches.pdf
+      \endverb
+    \endentry
+    \entry{myers_AsynchronousCircuitDesign_2001}{book}{}
+      \name{author}{1}{}{%
+        {{hash=318c3216c133200b418b9447f2b84fae}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Chris\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Salt Lake City, Utah, USA}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{318c3216c133200b418b9447f2b84fae}
+      \strng{fullhash}{318c3216c133200b418b9447f2b84fae}
+      \strng{bibnamehash}{318c3216c133200b418b9447f2b84fae}
+      \strng{authorbibnamehash}{318c3216c133200b418b9447f2b84fae}
+      \strng{authornamehash}{318c3216c133200b418b9447f2b84fae}
+      \strng{authorfullhash}{318c3216c133200b418b9447f2b84fae}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With asynchronous circuit design becoming a powerful tool in the development of new digital systems, circuit designers are expected to have asynchronous design skills and be able to leverage them to reduce power consumption and increase system speed. This book walks readers through all of the different methodologies of asynchronous circuit design, emphasizing practical techniques and real-world applications instead of theoretical simulation. The only guide of its kind, it also features an ftp site complete with support materials. Market: Electrical Engineers, Computer Scientists, Device Designers, and Developers in industry.}
+      \field{day}{23}
+      \field{isbn}{978-0-471-41543-5}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{pagetotal}{425}
+      \field{title}{Asynchronous {{Circuit Design}}}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \keyw{Technology & Engineering / Electrical,Technology & Engineering / Electronics / Circuits / VLSI & ULSI}
+    \endentry
+    \entry{dacol_SensitivityAnalysisStochastic_1984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f98871d4bfc135b681a1fca34929949a}{%
+           family={Dacol},
+           familyi={D\bibinitperiod},
+           given={D.\bibnamedelimi K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=a39de909d32c6b4cd5c9b685fb9573fb}{%
+           family={Rabitz},
+           familyi={R\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \strng{fullhash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \strng{bibnamehash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \strng{authorbibnamehash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \strng{authornamehash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \strng{authorfullhash}{4a9233fd4be1cb446ef8a3ac8f8debe0}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{issn}{0022-2488}
+      \field{journaltitle}{J. Math. Phys.}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Sensitivity Analysis of Stochastic Kinetic Models}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{volume}{25}
+      \field{year}{1984}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2716\bibrangedash 2727}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1063/1.526478
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Dacol_Rabitz\\Dacol_Rabitz-1984-Sensitivity analysis of stochastic kinetic models.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.526478
+      \endverb
+      \verb{url}
+      \verb https://aip.scitation.org/doi/abs/10.1063/1.526478
+      \endverb
+    \endentry
+    \entry{damiani_ParameterSensitivityAnalysis_2013}{article}{}
+      \name{author}{4}{}{%
+        {{hash=19a1972aa1450baccd8bee91036be0e9}{%
+           family={Damiani},
+           familyi={D\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a8bbc2b1e451779332a2954fe42738f6}{%
+           family={Filisetti},
+           familyi={F\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=904c289246a87b29b9f0c39cefc562ba}{%
+           family={Graudenzi},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9b62402c6916dae0c361a1860a7e60ef}{%
+           family={Lecca},
+           familyi={L\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fc349059896dea763c2ba3adc67283e}
+      \strng{fullhash}{3fc349059896dea763c2ba3adc67283e}
+      \strng{bibnamehash}{3fc349059896dea763c2ba3adc67283e}
+      \strng{authorbibnamehash}{3fc349059896dea763c2ba3adc67283e}
+      \strng{authornamehash}{3fc349059896dea763c2ba3adc67283e}
+      \strng{authorfullhash}{3fc349059896dea763c2ba3adc67283e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A general numerical methodology for parametric sensitivity analysis is proposed, which allows to determine the parameters exerting the greatest influence on the output of a stochastic computational model, especially when the knowledge about the actual value of a parameter is insufficient. An application of the procedure is performed on a model of protocell, in order to detect the kinetic rates mainly affecting the capability of a catalytic reaction network enclosed in a semi-permeable membrane to retain material from its environment and to generate a variety of molecular species within its boundaries. It is shown that the former capability is scarcely sensitive to variations in the model parameters, whereas a kinetic rate responsible for profound modifications of the latter can be identified and it depends on the specific reaction network. A faster uptaking of limited resources from the environment may have represented a significant advantage from an evolutionary point of view and this result is a first indication in order to decipher which kind of structures are more suitable to achieve a viable evolution.}
+      \field{day}{1}
+      \field{issn}{1476-9271}
+      \field{journaltitle}{Comput. Biol. Chem.}
+      \field{month}{2}
+      \field{shorttitle}{Parameter Sensitivity Analysis of Stochastic Models}
+      \field{title}{Parameter Sensitivity Analysis of Stochastic Models: {{Application}} to Catalytic Reaction Networks}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{volume}{42}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5\bibrangedash 17}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.compbiolchem.2012.10.007
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Damiani et al\\Damiani et al-2013-Parameter sensitivity analysis of stochastic models.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476927112000771
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S1476927112000771
+      \endverb
+      \keyw{Catalytic reaction networks,Protocell,Sensitivity coefficient,Stochastic modeling}
+    \endentry
+    \entry{gupta_EfficientUnbiasedMethod_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e879c19d2676918825359f7d93d110ca}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Ankit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5acb5c6abff7145489af27c0e8c43608}{%
+           family={Khammash},
+           familyi={K\bibinitperiod},
+           given={Mustafa},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \strng{fullhash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \strng{bibnamehash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \strng{authorbibnamehash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \strng{authornamehash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \strng{authorfullhash}{87d90456e86a36f74f6abc33ffa7e0a5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider the problem of estimating parameter sensitivity for Markovian models of reaction networks. Sensitivity values measure the responsiveness of an output with respect to the model parameters. They help in analysing the network, understanding its robustness properties and identifying the important reactions for a specific output. Sensitivity values are commonly estimated using methods that perform finite-difference computations along with Monte Carlo simulations of the reaction dynamics. These methods are computationally efficient and easy to implement, but they produce a biased estimate which can be unreliable for certain applications. Moreover, the size of the bias is generally unknown and hence the accuracy of these methods cannot be easily determined. There also exist unbiased schemes for sensitivity estimation but these schemes can be computationally infeasible, even for very simple networks. Our goal in this paper is to present a new method for sensitivity estimation, which combines the computational efficiency of finite-difference methods with the accuracy of unbiased schemes. Our method is easy to implement and it relies on an exact representation of parameter sensitivity that we recently proved elsewhere. Through examples, we demonstrate that the proposed method can outperform the existing methods, both biased and unbiased, in many situations.}
+      \field{day}{6}
+      \field{issn}{1742-5689, 1742-5662}
+      \field{journaltitle}{J. R. Soc. Interface}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{101}
+      \field{title}{An Efficient and Unbiased Method for Sensitivity Analysis of Stochastic Reaction Networks}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{volume}{11}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{20140979}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rsif.2014.0979
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Gupta_Khammash\\Gupta_Khammash-2014-An efficient and unbiased method for sensitivity analysis of stochastic.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://rsif.royalsocietypublishing.org/content/11/101/20140979
+      \endverb
+      \verb{url}
+      \verb http://rsif.royalsocietypublishing.org/content/11/101/20140979
+      \endverb
+    \endentry
+    \entry{irving_StochasticSensitivityAnalysis_1992}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8caade469b0923a9b2f39454526dd7d7}{%
+           family={Irving},
+           familyi={I\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8caade469b0923a9b2f39454526dd7d7}
+      \strng{fullhash}{8caade469b0923a9b2f39454526dd7d7}
+      \strng{bibnamehash}{8caade469b0923a9b2f39454526dd7d7}
+      \strng{authorbibnamehash}{8caade469b0923a9b2f39454526dd7d7}
+      \strng{authornamehash}{8caade469b0923a9b2f39454526dd7d7}
+      \strng{authorfullhash}{8caade469b0923a9b2f39454526dd7d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Sensitivity can be defined as the degree of variability of the output parameters of a system with respect to the variability of the input parameters. This work establishes the link between the sensitivity functions and the Volterra kernel functions, which are an expansion of nonlinear impulse response functions. The Volterra kernel values may be extracted directly from the sample estimates of the statistical moments obtained from the time series data. The three most commonly used definitions of sensitivity are given, and sensitivity analysis is introduced as an important tool in the validation process of the simulation model. Stochastic sensitivity is presented as a complementary technique, and the relationships with the other forms of sensitivity analysis are discussed. As an example, the results from a stochastic sensitivity analysis are compared with the results from a differential sensitivity analysis, and the appropriate range of usage of the stochastic technique is discussed.}
+      \field{day}{1}
+      \field{issn}{0307-904X}
+      \field{journaltitle}{Appl. Math. Model.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Stochastic Sensitivity Analysis}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{volume}{16}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3\bibrangedash 15}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/0307-904X(92)90110-O
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Irving\\Irving-1992-Stochastic sensitivity analysis.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/0307904X9290110O
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0307904X9290110O
+      \endverb
+      \keyw{nonlinear response,sensitivity,stochastic process,time series moments,validation}
+    \endentry
+    \entry{marino_MethodologyPerformingGlobal_2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3e2a331e154a71ae3e712dd97d2a4534}{%
+           family={Marino},
+           familyi={M\bibinitperiod},
+           given={Simeone},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4356fbeabc7f2cf996689ad42b2f7c53}{%
+           family={Hogue},
+           familyi={H\bibinitperiod},
+           given={Ian\bibnamedelima B.},
+           giveni={I\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3db497e3b9393ca7018344f056bc23b0}{%
+           family={Ray},
+           familyi={R\bibinitperiod},
+           given={Christian\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=06b7c2879ed494b690d3ca8a28c9d55e}{%
+           family={Kirschner},
+           familyi={K\bibinitperiod},
+           given={Denise\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \strng{fullhash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \strng{bibnamehash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \strng{authorbibnamehash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \strng{authornamehash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \strng{authorfullhash}{bcbc780bc0aebcdc4b1e3bf9347bf9cb}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accuracy of results from mathematical and computer models of biological systems is often complicated by the presence of uncertainties in experimental data that are used to estimate parameter values. Current mathematical modeling approaches typically use either single-parameter or local sensitivity analyses. However, these methods do not accurately assess uncertainty and sensitivity in the system as, by default, they hold all other parameters fixed at baseline values. Using techniques described within we demonstrate how a multi-dimensional parameter space can be studied globally so all uncertainties can be identified. Further, uncertainty and sensitivity analysis techniques can help to identify and ultimately control uncertainties. In this work we develop methods for applying existing analytical tools to perform analyses on a variety of mathematical and computer models. We compare two specific types of global sensitivity analysis indexes that have proven to be among the most robust and efficient. Through familiar and new examples of mathematical and computer models, we provide a complete methodology for performing these analyses, in both deterministic and stochastic settings, and propose novel techniques to handle problems encountered during these types of analyses.}
+      \field{day}{7}
+      \field{issn}{0022-5193}
+      \field{journaltitle}{J. Theor. Biol.}
+      \field{month}{9}
+      \field{number}{1}
+      \field{title}{A Methodology for Performing Global Uncertainty and Sensitivity Analysis in Systems Biology}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2018}
+      \field{volume}{254}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{178\bibrangedash 196}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.jtbi.2008.04.011
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Marino et al\\Marino et al-2008-A methodology for performing global uncertainty and sensitivity analysis in.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022519308001896
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022519308001896
+      \endverb
+      \keyw{Agent-based model (ABM),Aleatory uncertainty,Epistemic uncertainty,Extended Fourier amplitude sensitivity test (eFAST),Latin hypercube sampling (LHS),Monte Carlo methods,Partial rank correlation coefficient (PRCC),Sensitivity index}
+    \endentry
+    \entry{brenner_EngineeringMicrobialConsortia_2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7055358a8ad7e39f53144f0a564f9d50}{%
+           family={Brenner},
+           familyi={B\bibinitperiod},
+           given={Katie},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d5cac0ae73de27713971b4eae7d1a350}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Lingchong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cde5c1a2f9765557c380c59930098eb6}{%
+           family={Arnold},
+           familyi={A\bibinitperiod},
+           given={Frances\bibnamedelima H.},
+           giveni={F\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \strng{fullhash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \strng{bibnamehash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \strng{authorbibnamehash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \strng{authornamehash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \strng{authorfullhash}{3dbf8ef8e91cea0ede3c6d0568d89a14}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Microbial consortia are ubiquitous in nature and are implicated in processes of great importance to humans, from environmental remediation and wastewater treatment to assistance in food digestion. Synthetic biologists are honing their ability to program the behavior of individual microbial populations, forcing the microbes to focus on specific applications, such as the production of drugs and fuels. Given that microbial consortia can perform even more complicated tasks and endure more changeable environments than monocultures can, they represent an important new frontier for synthetic biology. Here, we review recent efforts to engineer synthetic microbial consortia, and we suggest future applications.}
+      \field{day}{1}
+      \field{issn}{0167-7799}
+      \field{journaltitle}{Trends Biotechnol.}
+      \field{month}{9}
+      \field{number}{9}
+      \field{shorttitle}{Engineering Microbial Consortia}
+      \field{title}{Engineering Microbial Consortia: A New Frontier in Synthetic Biology}
+      \field{urlday}{12}
+      \field{urlmonth}{11}
+      \field{urlyear}{2018}
+      \field{volume}{26}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{483\bibrangedash 489}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.tibtech.2008.05.004
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Brenner et al\\Brenner et al-2008-Engineering microbial consortia.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167779908001716
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167779908001716
+      \endverb
+    \endentry
+    \entry{faust_MicrobialConsortiumDesign_2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7d75c3a4413245d92380cffbc91c6526}{%
+           family={Faust},
+           familyi={F\bibinitperiod},
+           given={Karoline},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d75c3a4413245d92380cffbc91c6526}
+      \strng{fullhash}{7d75c3a4413245d92380cffbc91c6526}
+      \strng{bibnamehash}{7d75c3a4413245d92380cffbc91c6526}
+      \strng{authorbibnamehash}{7d75c3a4413245d92380cffbc91c6526}
+      \strng{authornamehash}{7d75c3a4413245d92380cffbc91c6526}
+      \strng{authorfullhash}{7d75c3a4413245d92380cffbc91c6526}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Consortia outperform single microorganisms at multiple tasks. However, consortium design is challenging and successful application examples are rare. A major challenge is the selection of consortium members such that performance is optimized. In a recent publication, metabolic modeling has been successfully applied to aid consortium design.}
+      \field{day}{1}
+      \field{issn}{0167-7799}
+      \field{journaltitle}{Trends Biotechnol.}
+      \field{month}{2}
+      \field{number}{2}
+      \field{title}{Microbial Consortium Design Benefits from Metabolic Modeling}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{37}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{123\bibrangedash 125}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1016/j.tibtech.2018.11.004
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Faust\\Faust-2019-Microbial Consortium Design Benefits from Metabolic Modeling.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167779918303147
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0167779918303147
+      \endverb
+    \endentry
+    \entry{gould_MicrobiomeInteractionsShape_2018}{article}{}
+      \name{author}{10}{}{%
+        {{hash=75f240274f47502f04b9202e5cdb7082}{%
+           family={Gould},
+           familyi={G\bibinitperiod},
+           given={Alison\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=0e6b9dd8f01ce904f68a78154e852933}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Vivian},
+           giveni={V\bibinitperiod}}}%
+        {{hash=6c182f53ac7e9bc1036ab2f1aabdee2b}{%
+           family={Lamberti},
+           familyi={L\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d9ae0520479e9553c0cc8cae1a26444a}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=e428ccbf436ca9532999b0d59e941c9f}{%
+           family={Obadia},
+           familyi={O\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c826a7e9d371ebaa6f2c10d735d99816}{%
+           family={Korasidis},
+           familyi={K\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=712e0706330bcde463befed5821f6214}{%
+           family={Gavryushkin},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2774f03c60a1ef74c619179de50e0ac4}{%
+           family={Carlson},
+           familyi={C\bibinitperiod},
+           given={Jean\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=25705b5e5353ceb06a741f89ee72a3a3}{%
+           family={Beerenwinkel},
+           familyi={B\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a2779f10136e855a48dbe6aec733934f}{%
+           family={Ludington},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{763c87c02ca853fd5fa215436d76e06d}
+      \strng{fullhash}{763c87c02ca853fd5fa215436d76e06d}
+      \strng{bibnamehash}{763c87c02ca853fd5fa215436d76e06d}
+      \strng{authorbibnamehash}{763c87c02ca853fd5fa215436d76e06d}
+      \strng{authornamehash}{763c87c02ca853fd5fa215436d76e06d}
+      \strng{authorfullhash}{763c87c02ca853fd5fa215436d76e06d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Gut bacteria can affect key aspects of host fitness, such as development, fecundity, and lifespan, while the host, in turn, shapes the gut microbiome. However, it is unclear to what extent individual species versus community interactions within the microbiome are linked to host fitness. Here, we combinatorially dissect the natural microbiome of Drosophila melanogaster and reveal that interactions between bacteria shape host fitness through life history tradeoffs. Empirically, we made germ-free flies colonized with each possible combination of the five core species of fly gut bacteria. We measured the resulting bacterial community abundances and fly fitness traits, including development, reproduction, and lifespan. The fly gut promoted bacterial diversity, which, in turn, accelerated development, reproduction, and aging: Flies that reproduced more died sooner. From these measurements, we calculated the impact of bacterial interactions on fly fitness by adapting the mathematics of genetic epistasis to the microbiome. Development and fecundity converged with higher diversity, suggesting minimal dependence on interactions. However, host lifespan and microbiome abundances were highly dependent on interactions between bacterial species. Higher-order interactions (involving three, four, and five species) occurred in 13–44\% of possible cases depending on the trait, with the same interactions affecting multiple traits, a reflection of the life history tradeoff. Overall, we found these interactions were frequently context-dependent and often had the same magnitude as individual species themselves, indicating that the interactions can be as important as the individual species in gut microbiomes.}
+      \field{day}{18}
+      \field{issn}{0027-8424, 1091-6490}
+      \field{journaltitle}{PNAS}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{51}
+      \field{title}{Microbiome Interactions Shape Host Fitness}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{115}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{E11951\bibrangedash E11960}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1073/pnas.1809349115
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Gould et al\\Gould et al-2018-Microbiome interactions shape host fitness.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/content/115/51/E11951
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/content/115/51/E11951
+      \endverb
+      \keyw{Drosophila,fitness landscape,higher-order interactions,life history tradeoffs,microbiome}
+    \endentry
+    \entry{pinto_ModelingMetabolicInteractions_2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2816a1498ac2dd6ffd4eaf3bf6219fd7}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c3148fbcccbe7eb6b6364f8fd465223f}{%
+           family={Medina},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f1fa738997970e86e97775c27257eb10}{%
+           family={Pérez-Correa},
+           familyi={P\bibinithyphendelim C\bibinitperiod},
+           given={José\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=8ac577d295d21a5ce77474aa01877b92}{%
+           family={Garrido},
+           familyi={G\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \strng{fullhash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \strng{bibnamehash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \strng{authorbibnamehash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \strng{authornamehash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \strng{authorfullhash}{b24f78da8e8d50d3b86f384407bf70fb}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The gut microbiome is a complex microbial community that has a significant influence on the host. Microbial interactions in the gut are mediated by dietary substrates, especially complex polysaccharides. In this environment, breakdown products from larger carbohydrates and short chain fatty acids are commonly shared among gut microbes. Understanding the forces that guide microbiome development and composition is important to determine its role in health and in the intervention of the gut microbiome as a therapeutic tool. Recently, modeling approaches such as genome-scale models and time-series analyses have been useful to predict microbial interactions. In this study, a bottom-up approach was followed to develop a mathematical model based on microbial growth equations that incorporate metabolic sharing and inhibition. The model was developed using experimental in vitro data from a system comprising four microorganisms of the infant gut microbiome (Bifidobacterium longum subsp. infantis, Lactobacillus acidophilus, Escherichia coli, and Bacteroides vulgatus), one substrate (fructooligosaccharides, FOS), and evaluating two metabolic products (acetate and lactate). After parameter optimization, the model accurately predicted bacterial abundance in co-cultures from mono-culture data. In addition, a good correlation was observed between the experimental data with predicted FOS consumption and acid production. B. infantis and L. acidophilus were dominant under these conditions. Further model validation included cultures with the four-species in a bioreactor using FOS. The model was able to predict the predominance of the two aforementioned species, as well as depletion of acetate and lactate. Finally, the model was tested for parameter identifiability and sensitivity. These results suggest that variations in microbial abundance and activities in the infant gut were mainly explained by metabolic interactions, and could be properly modeled using Monod kinetics with metabolic interactions. The model could be scaled to include data from larger consortia, or be applied to microbial communities where sharing metabolic resources is important in shaping bacterial abundance. Moreover, the model could be useful in designing microbial consortia with desired properties such as higher acid production.}
+      \field{day}{14}
+      \field{issn}{1664-302X}
+      \field{journaltitle}{Front. Microbiol.}
+      \field{month}{12}
+      \field{title}{Modeling Metabolic Interactions in a Consortium of the Infant Gut Microbiome}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{8}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3389/fmicb.2017.02507
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Pinto et al\\Pinto et al-2017-Modeling Metabolic Interactions in a Consortium of the Infant Gut Microbiome.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5735223/
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5735223/
+      \endverb
+    \endentry
+    \entry{venturelli_DecipheringMicrobialInteractions_2018}{article}{}
+      \name{author}{9}{}{%
+        {{hash=7419ff5f2b532c40d16db2bbc541063c}{%
+           family={Venturelli},
+           familyi={V\bibinitperiod},
+           given={Ophelia\bibnamedelima S.},
+           giveni={O\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5910ad47675f7c0333d4b0f010213d22}{%
+           family={Carr},
+           familyi={C\bibinitperiod},
+           given={Alex\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=1f9fefbfb4c6600a95445b0ed05ad34b}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Garth},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9ac353e09bc1ed5f6775232f6d63afc7}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Ryan\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e72b83838be79970d31cc1c810490f97}{%
+           family={Lau},
+           familyi={L\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=858d17f549146a75f19b5b4970f066f6}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={Benjamin\bibnamedelima P.},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=09f066a99615474e065b60f7280baa1a}{%
+           family={Hromada},
+           familyi={H\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9a857ae75e0ef59534a3ea285bb29515}{%
+           family={Northen},
+           familyi={N\bibinitperiod},
+           given={Trent},
+           giveni={T\bibinitperiod}}}%
+        {{hash=3884636e9e301b5b70daad17c42a6555}{%
+           family={Arkin},
+           familyi={A\bibinitperiod},
+           given={Adam\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{66f798124cf4201134a464b5e4471a6f}
+      \strng{fullhash}{66f798124cf4201134a464b5e4471a6f}
+      \strng{bibnamehash}{66f798124cf4201134a464b5e4471a6f}
+      \strng{authorbibnamehash}{66f798124cf4201134a464b5e4471a6f}
+      \strng{authornamehash}{66f798124cf4201134a464b5e4471a6f}
+      \strng{authorfullhash}{66f798124cf4201134a464b5e4471a6f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The ecological forces that govern the assembly and stability of the human gut microbiota remain unresolved. We developed a generalizable model‐guided framework to predict higher‐dimensional consortia from time‐resolved measurements of lower‐order assemblages. This method was employed to decipher microbial interactions in a diverse human gut microbiome synthetic community. We show that pairwise interactions are major drivers of multi‐species community dynamics, as opposed to higher‐order interactions. The inferred ecological network exhibits a high proportion of negative and frequent positive interactions. Ecological drivers and responsive recipient species were discovered in the network. Our model demonstrated that a prevalent positive and negative interaction topology enables robust coexistence by implementing a negative feedback loop that balances disparities in monospecies fitness levels. We show that negative interactions could generate history‐dependent responses of initial species proportions that frequently do not originate from bistability. Measurements of extracellular metabolites illuminated the metabolic capabilities of monospecies and potential molecular basis of microbial interactions. In sum, these methods defined the ecological roles of major human‐associated intestinal species and illuminated design principles of microbial communities. See also: C Abreu et al (June 2018) Synopsis {$<$}img class="highwire-embed" alt="Embedded Image" src="http://msb.embopress.org/sites/default/files/highwire/msb/14/6/e8157/embed/graphic-1.gif"/{$>$} Analysis of microbial interactions in a synthetic human gut microbiome community shows that pairwise microbial interactions are major drivers of multi‐species community dynamics. The study reveals ecological drivers, metabolite hub species and ecologically sensitive organisms in the network. A data‐driven pipeline is used to construct a predictive dynamic model of a diverse anaerobic human gut microbiome community.Design principles of stable coexistence and history‐dependence are elucidated.Ecological roles and metabolite profiles are analyzed for each organism.The study highlights challenges in using phylogenetic and exo‐metabolomic “signals” to predict microbial interactions and community functions.}
+      \field{day}{1}
+      \field{issn}{1744-4292, 1744-4292}
+      \field{journaltitle}{Mol. Syst. Biol.}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Deciphering Microbial Interactions in Synthetic Human Gut Microbiome Communities}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{14}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e8157}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.15252/msb.20178157
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Venturelli et al\\Venturelli et al-2018-Deciphering microbial interactions in synthetic human gut microbiome communities.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://msb.embopress.org/content/14/6/e8157
+      \endverb
+      \verb{url}
+      \verb http://msb.embopress.org/content/14/6/e8157
+      \endverb
+      \keyw{ecology,human gut microbiome,mathematical modeling,microbial community,microbial interaction}
+    \endentry
+    \entry{white_MultiscaleModelingBiomedical_2009}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6f0197d6bede7b393a79168d0e599d4a}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e45d1144e16cead8225cb7dc2d0f05cf}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={G.\bibnamedelimi C.\bibnamedelimi Y.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=c861662394982a08aed7929033fd6853}{%
+           family={Demir},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c324a8ac32c6141825c1611b5a261c5}
+      \strng{fullhash}{2c324a8ac32c6141825c1611b5a261c5}
+      \strng{bibnamehash}{2c324a8ac32c6141825c1611b5a261c5}
+      \strng{authorbibnamehash}{2c324a8ac32c6141825c1611b5a261c5}
+      \strng{authornamehash}{2c324a8ac32c6141825c1611b5a261c5}
+      \strng{authorfullhash}{2c324a8ac32c6141825c1611b5a261c5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Mathematical and computational modeling provide a natural infrastructure for systematically bringing together the wealth of data and knowledge obtained from biological, physiological, and clinical research. Furthermore, the power of this infrastructure is the ability for the model to simulate pathophysiology and predict how, when, and in whom diseases will develop. Historically, the majority of models in biology and physiology are created to understand a particular process or phenomenon by putting together known biological constructs, using modeling to fill in the gaps of the unknown, creating new hypotheses, and redesigning the models based on experimental outcomes and measures. These models are often used to supplement research efforts focused on specific biological questions and domain areas to provide new insights in understanding data.}
+      \field{issn}{0739-5175}
+      \field{journaltitle}{IEEE Eng. Med. Biol. Mag.}
+      \field{month}{3}
+      \field{number}{2}
+      \field{title}{Multiscale Modeling of Biomedical, Biological, and Behavioral Systems ({{Part}} 1) [{{Introduction}} to the Special Issue]}
+      \field{volume}{28}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{12\bibrangedash 13}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/MEMB.2009.932388
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\White et al\\White et al-2009-Multiscale modeling of biomedical, biological, and behavioral systems (Part 1).pdf
+      \endverb
+      \keyw{behavioral systems,Biological system modeling,biological systems,Biomedical Engineering,Biomedical measurements,biomedical systems,Computational biology,Computational Biology,computational modeling,Computational modeling,diseases,Diseases,Humans,infrastructure,Models; Biological,multiscale modeling,Particle measurements,pathophysiology,Physiology,Power system modeling,Predictive models,Special issues and sections}
+    \endentry
+    \entry{kambam_DesignMathematicalModelling_2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ab6e65ebd8a44a80e0d4702cdd449a5d}{%
+           family={Kambam},
+           familyi={K\bibinitperiod},
+           given={P.\bibnamedelimi K.\bibnamedelimi R.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=72454d161ce84110d10de4d6157c5e7f}{%
+           family={Henson},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=abe54d71a8749221df19e0ecf976f01c}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{928d7093137546919b0bdbbe4d207b07}
+      \strng{fullhash}{928d7093137546919b0bdbbe4d207b07}
+      \strng{bibnamehash}{928d7093137546919b0bdbbe4d207b07}
+      \strng{authorbibnamehash}{928d7093137546919b0bdbbe4d207b07}
+      \strng{authornamehash}{928d7093137546919b0bdbbe4d207b07}
+      \strng{authorfullhash}{928d7093137546919b0bdbbe4d207b07}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Artificial microbial ecosystems have been increasingly used to understand principles of ecology. These systems offer unique capabilities to mimic a variety of ecological interactions that otherwise would be difficult to study experimentally in a reasonable period of time. However, the elucidation of the genetic bases for these interactions remains a daunting challenge. To address this issue, we have designed and analysed a synthetic symbiotic ecosystem in which the genetic nature of the microbial interactions is defined explicitly. A mathematical model of the gene regulatory network in each species and their interaction through quorum sensing mediated intercellular signalling was derived to investigate the effect of system components on cooperative behaviour. Dynamic simulation and bifurcation analysis showed that the designed system admits a stable coexistence steady state for sufficiently large initial cell concentrations of the two species. The steady-state fraction of each species could be altered by varying model parameters associated with gene transcription and signalling molecule synthesis rates. The design also admitted a stable steady state corresponding to extinction of the two species for low initial cell concentrations and stable periodic solutions over certain domains of parameter space. The mathematical analysis was shown to provide insights into natural microbial ecosystems and to allow identification of molecular targets for engineering system behaviour. (Includes 7 pages of supplementary material)}
+      \field{day}{1}
+      \field{issn}{1751-8857}
+      \field{journaltitle}{IET Syst. Biol.}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Design and Mathematical Modelling of a Synthetic Symbiotic Ecosystem}
+      \field{urlday}{4}
+      \field{urlmonth}{6}
+      \field{urlyear}{2019}
+      \field{volume}{2}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{33\bibrangedash 38}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1049/iet-syb:20070011
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\elros\\Dropbox\\UTAH UNIVERSITY\\THESIS\\Papers\\Kambam et al\\Kambam et al-2008-Design and mathematical modelling of a synthetic symbiotic ecosystem.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://digital-library.theiet.org/content/journals/10.1049/iet-syb_20070011
+      \endverb
+      \verb{url}
+      \verb https://digital-library.theiet.org/content/journals/10.1049/iet-syb_20070011
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
